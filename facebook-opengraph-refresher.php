@@ -34,6 +34,10 @@ function for_load_plugin_textdomain() {
 
 add_action( 'plugins_loaded', 'for_load_plugin_textdomain', 1 );
 require_once( plugin_dir_path( __FILE__ ) . 'composer/autoload.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/functions.php' );
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once( plugin_dir_path( __FILE__ ) . 'includes/FOR_WPCli.php' );
+}
 
 /*
  * If you want to include Ajax within the dashboard, change the following

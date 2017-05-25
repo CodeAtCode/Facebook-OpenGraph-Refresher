@@ -23,18 +23,20 @@ class For_WPCli {
 	 * 
 	 * ## OPTIONS
 	 * 
-	 * ID
-     * : The Post ID to refresh on Facebook cache
+	 * <ID>
+	 * : The Post ID to refresh on Facebook cache
 	 * 
 	 * @param array $args
 	 */
 	public function wpcli( $args ) {
-		$plugin = Facebook_OpenGraph_Refresher_Admin::get_instance();
-		$status = $plugin->refresh_open_graph_post_type( $args[ 0 ] );
+		if ( !isset( $args[ 0 ] ) ) {
+			WP_CLI::error( 'Missing Post ID ');
+		}
+		$status = for_refresh_open_graph_by_post_type_id( $args[ 0 ] );
 		if ( !is_wp_error( $status ) ) {
-			WP_CLI::success( 'Facebook OpenGraph Refreshed for Post id ' . $args[0] );
+			WP_CLI::success( 'Facebook OpenGraph Refreshed for Post ID ' . $args[ 0 ] );
 		} else {
-			WP_CLI::error( 'Facebook OpenGraph not Refreshed for Post id ' . $args[0] );
+			WP_CLI::error( 'Facebook OpenGraph not Refreshed for Post ID ' . $args[ 0 ] );
 		}
 	}
 
