@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: codeat, mte90
-Tags: facebook, opengraph
+Tags: facebook, opengraph,refresh
 Requires at least: 4.6
 Tested up to: 4.7
 Stable tag: 1.0.0
@@ -37,5 +37,3 @@ e.g.
 == Changelog ==
 = 1.0 =
 * First release
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
