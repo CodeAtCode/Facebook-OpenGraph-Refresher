@@ -86,14 +86,14 @@ class Facebook_OpenGraph_Refresher_Admin {
 	 * Show an alert about the status of the refresh
 	 */
 	public function show_alert() {
-		$refresh = '';
+		$refresh = 'no';
 		if ( isset( $_GET[ 'for_refresh' ] ) ) {
 			$refresh = esc_html( $_GET[ 'for_refresh' ] );
 		} elseif ( isset( $_GET[ 'for_refresh_it' ] ) ) {
 			$this->refresh_open_graph_post_type( esc_html( $_GET[ 'post' ] ) );
 			$refresh = $this->status;
 		}
-		if ( $refresh === '1' || $refresh = true ) {
+		if ( $refresh === '1' || $refresh === true ) {
 			new WP_Admin_Notice( __( 'Facebook OpenGraph refreshed!', FOR_TEXTDOMAIN ), 'updated' );
 		}
 	}
@@ -101,7 +101,6 @@ class Facebook_OpenGraph_Refresher_Admin {
 	public function force_refresh() {
 		$screen = get_current_screen();
 		if ( $screen->parent_base === 'edit' ) {
-			global $wp;
 			?>
 			<script>
 				jQuery('.wrap .page-title-action').after('<a href="<?php echo add_query_arg( 'for_refresh_it', true ); ?>" class="add-new-h2"><?php _e( 'Refresh Facebook OpenGraph', FOR_TEXTDOMAIN ) ?></a>');
