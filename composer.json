@@ -1,0 +1,29 @@
+{
+    "require": {
+        "php": ">=5.3",
+        "idct\/composer-custom-directory": "dev-master",
+        "composer\/installers": "1.1.0",
+        "nathanielks\/wp-admin-notice": "dev-master"
+    },
+    "repositories": [
+        {
+            "url": "https:\/\/github.com\/WPBP\/installers",
+            "type": "vcs"
+        },
+        {
+            "url": "git@github.com:nathanielks\/wordpress-admin-notice.git",
+            "type": "git"
+        }
+    ],
+    "config": {
+        "vendor-dir": "composer\/"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "installer-paths": {
+            ".\/admin\/includes\/lib\/{$name|F}": {
+                "6": "nathanielks\/wp-admin-notice"
+            }
+        }
+    }
+}
