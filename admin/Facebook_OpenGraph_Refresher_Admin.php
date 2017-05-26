@@ -62,7 +62,7 @@ class Facebook_OpenGraph_Refresher_Admin {
 	 * @since 1.0.0
 	 */
 	public function refresh_open_graph_post_type( $post_id ) {
-		$response = for_refresh_open_graph_by_post_type_id();
+		$response = for_refresh_open_graph_by_post_type_id( $post_id );
 		$this->status = false;
 		if ( !is_wp_error( $response ) ) {
 			$this->status = true;
