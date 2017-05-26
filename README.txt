@@ -40,5 +40,7 @@ e.g.
 1. The button for refresh manually
 2. The output on console of WP CLI
 == Changelog ==
+= 1.0.1 =
+* Little bugix
 = 1.0 =
 * First release
