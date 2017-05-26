@@ -13,7 +13,7 @@
  * Version:           1.0.0
  * Author:            Codeat
  * Author URI:        http://codeat.co
- * Text Domain:       facebook-opengraph-refresher
+ * Text Domain:       for-facebook-opengraph-refresher
  * License:           GPL 2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
@@ -24,7 +24,7 @@ if ( !defined( 'WPINC' ) ) {
 	die;
 }
 define( 'FOR_VERSION', '1.0.0' );
-define( 'FOR_TEXTDOMAIN', 'facebook-opengraph-refresher' );
+define( 'FOR_TEXTDOMAIN', 'for-facebook-opengraph-refresher' );
 define( 'FOR_NAME', 'Facebook OpenGraph Refresher' );
 
 function for_load_plugin_textdomain() {
@@ -39,16 +39,6 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once( plugin_dir_path( __FILE__ ) . 'includes/FOR_WPCli.php' );
 }
 
-/*
- * If you want to include Ajax within the dashboard, change the following
- * conditional to:
- *
- * if ( is_admin() ) {
- *   ...
- * }
- *
- * The code below is intended to to give the lightest footprint possible.
- */
 if ( is_admin() &&
 		(function_exists( 'wp_doing_ajax' ) && !wp_doing_ajax() ||
 		(!defined( 'DOING_AJAX' ) || !DOING_AJAX ) )
