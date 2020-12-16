@@ -23,7 +23,7 @@ class Facebook_OpenGraph_Refresher_Admin {
 	private $status = '';
 
 	/**
-	 * Initialize the plugin 
+	 * Initialize the plugin
 	 *
 	 * @since 1.0.0
 	 */
@@ -73,7 +73,7 @@ class Facebook_OpenGraph_Refresher_Admin {
 
 	/**
 	 * Add a parameter in the url to show the alert
-	 * 
+	 *
 	 * @param string $location
 	 * @return string
 	 */
@@ -104,6 +104,9 @@ class Facebook_OpenGraph_Refresher_Admin {
 			?>
 			<script>
 				jQuery('.wrap .page-title-action').after('<a href="<?php echo add_query_arg( 'for_refresh_it', true ); ?>" class="add-new-h2"><?php _e( 'Refresh Facebook OpenGraph', FOR_TEXTDOMAIN ) ?></a>');
+				setTimeout(function(){
+					jQuery('.components-button.editor-post-switch-to-draft').after('<a href="<?php echo add_query_arg( 'for_refresh_it', true ); ?>" class="components-button is-tertiary"><?php _e( 'Refresh Facebook OpenGraph', FOR_TEXTDOMAIN ) ?></a>');
+				}, 2000);
 			</script>
 			<?php
 		}
