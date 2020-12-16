@@ -29,7 +29,7 @@ class Facebook_OpenGraph_Refresher_Admin {
 	 */
 	private function __construct() {
 		add_action( 'save_post', array( $this, 'refresh_open_graph_post_type' ) );
-		add_action( 'admin_init', array( $this, 'show_alert' ) );
+		add_action( 'admin_init', array( $this, 'show_alert' ), 99999 );
 		add_action( 'admin_print_footer_scripts', array( $this, 'force_refresh' ) );
 	}
 
@@ -41,14 +41,6 @@ class Facebook_OpenGraph_Refresher_Admin {
 	 * @return object A single instance of this class.
 	 */
 	public static function get_instance() {
-		/*
-		 * @TODO :
-		 *
-		 * - Uncomment following lines if the admin class should only be available for super admins
-		  if( ! is_super_admin() ) {
-		  return;
-		  }
-		 */
 		// If the single instance hasn't been set, set it now.
 		if ( null == self::$instance ) {
 			self::$instance = new self;
@@ -95,6 +87,18 @@ class Facebook_OpenGraph_Refresher_Admin {
 		}
 		if ( $refresh === '1' || $refresh === true ) {
 			new WP_Admin_Notice( __( 'Facebook OpenGraph refreshed!', FOR_TEXTDOMAIN ), 'updated' );
+			?>
+			<script>
+				setTimeout(function(){
+					( function( wp ) {
+						wp.data.dispatch( 'core/notices' ).createNotice(
+							'success',
+							'<?php _e( 'Facebook OpenGraph refreshed!', FOR_TEXTDOMAIN ) ?>'
+						);
+					} )( window.wp );
+				}, 1000);
+			</script>
+			<?php
 		}
 	}
 
