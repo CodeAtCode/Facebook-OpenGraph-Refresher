@@ -3,7 +3,7 @@ Contributors: codeat, mte90
 Tags: facebook, opengraph, refresh
 Requires at least: 5.4
 Tested up to: 5.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Refresh the Facebook's cache of your opengraph data!

@@ -10,7 +10,7 @@
  * Plugin Name:       OpenGraph Refresher
  * Plugin URI:        https://wordpress.org/plugins/for-facebook-opengraph-refresher/
  * Description:       Refresh the OpenGraph of the post type on Facebook™ automatically
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Codeat
  * Author URI:        http://codeat.co
  * Text Domain:       for-facebook-opengraph-refresher
@@ -23,7 +23,7 @@
 if ( !defined( 'WPINC' ) ) {
 	die;
 }
-define( 'FOR_VERSION', '1.0.3' );
+define( 'FOR_VERSION', '1.0.4' );
 define( 'FOR_TEXTDOMAIN', 'for-facebook-opengraph-refresher' );
 define( 'FOR_NAME', 'OpenGraph Refresher' );
 
