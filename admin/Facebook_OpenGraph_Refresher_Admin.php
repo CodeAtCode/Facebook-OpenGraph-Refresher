@@ -86,14 +86,14 @@ class Facebook_OpenGraph_Refresher_Admin {
 			$refresh = $this->status;
 		}
 		if ( $refresh === '1' || $refresh === true ) {
-			new WP_Admin_Notice( __( 'Facebook OpenGraph refreshed!', FOR_TEXTDOMAIN ), 'updated' );
+			new WP_Admin_Notice( __( 'Facebook™ OpenGraph refreshed!', FOR_TEXTDOMAIN ), 'updated' );
 			?>
 			<script>
 				setTimeout(function(){
 					( function( wp ) {
 						wp.data.dispatch( 'core/notices' ).createNotice(
 							'success',
-							'<?php _e( 'Facebook OpenGraph refreshed!', FOR_TEXTDOMAIN ) ?>'
+							'<?php _e( 'Facebook™ OpenGraph refreshed!', FOR_TEXTDOMAIN ) ?>'
 						);
 					} )( window.wp );
 				}, 1000);

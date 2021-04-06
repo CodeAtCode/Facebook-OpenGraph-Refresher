@@ -1,18 +1,18 @@
 === Plugin Name ===
 Contributors: codeat, mte90
-Tags: facebook, opengraph,refresh
+Tags: facebook, opengraph, refresh
 Requires at least: 5.4
-Tested up to: 5.6
-Stable tag: 1.0.2
+Tested up to: 5.7
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Refresh the Facebook's cache of your opengraph data!
 == Description ==
-Have you ever upload to Facebook the wrong picture of your post? What about the title or the description?
+Have you ever upload to Facebook™ the wrong picture of your post? What about the title or the description?
 
 I know it could be a pain...
 
-That's because Facebook cache every information of your post types, but update the OpenGraph data can be very boring. You need to go to the dedicated Facebook page, get the OpenGraph about your post and refresh the cache.
+That's because Facebook™ cache every information of your post types, but update the OpenGraph data can be very boring. You need to go to the dedicated Facebook page, get the OpenGraph about your post and refresh the cache.
 This plugin will fix this problem! Each time that you save a post (any post type) it will automatically refresh the cache on Facebook servers for you!
 
 We've also added a button to do it manually from your dashboard and there is the WP-CLI support that will be incredibly useful to all the developers out there.
@@ -40,6 +40,8 @@ e.g.
 1. The button for refresh manually
 2. The output on console of WP CLI
 == Changelog ==
+== 1.0.3 ==
+* Added FB ™
 = 1.0.2 =
 * Gutenberg support
 = 1.0.1 =
