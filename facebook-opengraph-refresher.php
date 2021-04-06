@@ -7,7 +7,7 @@
  * @license   GPL 2.0+
  * @link      http://codeat.co
  *
- * Plugin Name:       Facebook™ OpenGraph Refresher
+ * Plugin Name:       OpenGraph Refresher
  * Plugin URI:        https://wordpress.org/plugins/for-facebook-opengraph-refresher/
  * Description:       Refresh the OpenGraph of the post type on Facebook™ automatically
  * Version:           1.0.3
@@ -25,7 +25,7 @@ if ( !defined( 'WPINC' ) ) {
 }
 define( 'FOR_VERSION', '1.0.3' );
 define( 'FOR_TEXTDOMAIN', 'for-facebook-opengraph-refresher' );
-define( 'FOR_NAME', 'Facebook OpenGraph Refresher' );
+define( 'FOR_NAME', 'OpenGraph Refresher' );
 
 require_once( plugin_dir_path( __FILE__ ) . 'vendor/autoload.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'includes/functions.php' );
