@@ -80,9 +80,9 @@ class Facebook_OpenGraph_Refresher_Admin {
 	public function show_alert() {
 		$refresh = 'no';
 		if ( isset( $_GET[ 'for_refresh' ] ) ) {
-			$refresh = esc_html( $_GET[ 'for_refresh' ] );
+			$refresh = sanitize_text_field( $_GET[ 'for_refresh' ] );
 		} elseif ( isset( $_GET[ 'for_refresh_it' ] ) ) {
-			$this->refresh_open_graph_post_type( esc_html( $_GET[ 'post' ] ) );
+			$this->refresh_open_graph_post_type( sanitize_text_field( $_GET[ 'post' ] ) );
 			$refresh = $this->status;
 		}
 		if ( $refresh === '1' || $refresh === true ) {
